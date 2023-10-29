@@ -1,30 +1,51 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inventory App</title>
-  <link rel="stylesheet" href="./build/tailwind.css">
-</head>
-<body>
-<div class="bg-slate-800 w-screen h-screen">
-<!-- appbar -->
-<div class="h-12 flex items-center justify-center gap-x-4 bg-slate-700">
-  <h1 class="text-xl font-bold text-slate-300">Inventory App using Tailwind & JS</h1>
-  <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 border-2 text-slate-300 border-slate-400">7</span>
-</div>
-<!--APP CONTENT  -->
-<div class="container mx-w-sm mx-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory App</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+  </head>
+  <body>
+    <div class="bg-slate-800  h-screen w-screen">
+      <!-- appbar -->
+      <div class="h-12 flex items-center justify-center gap-x-4 bg-slate-700">
+        <h1 class="text-xl font-bold text-slate-300">
+          Inventory App using Tailwind & JS
+        </h1>
+        <span
+          class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 border-2 text-slate-300 border-slate-400"
+          >7</span
+        >
+      </div>
+      <!--APP CONTENT  -->
+      <div class="container mx-w-screen-sm mx-auto mb-6 ">
+        <!--category form  -->
+        <div>
+          <h2 class="text-md font-bold text-slate-300 pt-2 mb-2 mx-auto">Add New Category</h2>
+          <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4">
+            <div>
+              <label for="category-title" class="block mb-1 text-slate-400">title</label>
+              <input type="text" name="category-title" id="category-title" class="bg-transparent rounded-xl text-slate-400 border-slate-500" />
+            </div>
+            <div>
+              <label for="category-description" class="block mb-1 text-slate-400" >Description</label>
+              <textarea type="text" name="category-description" id="category-description" class="bg-transparent rounded-xl text-slate-400 border-slate-500 w-full" ></textarea>
+            </div>
+            <div class="flex items-center justify-between gap-x-4  ">
+              <button class="flex-1  border border-slate-400 text-slate-200 rounded-xl py-2 px-4">Cancel</button>
+              <button class="flex-1 bg-slate-500 text-slate-300 rounded-xl py-2 px-4">Add New Category</button>
+           
+            </div>
+            
 
 
-<!--category form  -->
-
-<!-- products form -->
-
-
-</div>
+          
+        </form>
 
 
+      </div>
+      </div>
 
-</div>
-</body>
+    </div>
+  </body>
 </html>
