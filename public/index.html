@@ -1,152 +1,184 @@
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Inventory App</title>
-<link rel="stylesheet" href="./build/tailwind.css" />
-</head>
-<body class="bg-[url('/src/assets/pexels-photo-1402787.jpeg')]" >
-<div class= "min-h-screen antialiased text-slate-500 dark:text-slate-400bg-[url('/src/assets/pexels-photo-1402787.jpeg')]">
-<!-- appbar -->
-<div class=" sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-700 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent  h-12 bg-slate-50  flex items-center justify-center gap-x-4  backdrop-filter  bg-opacity-50 border border-slate-50 border-opacity-50 ">
-<h1 class="text-xl font-bold text-slate-300 ">
-Inventory App using Tailwind & JS
-</h1>
-<span
-class="flex items-center justify-center w-7 h-7 rounded-full dark:bg-slate-900 border-2 text-slate-300 border-slate-600"
->7</span
->
-</div>
-<!--APP CONTENT  -->
-<div class="container mx-w-screen-sm mx-auto mb-6 shadow-lg bg-[url('/src/assets/pexels-photo-1402787.jpeg')] overflow-hidden ">
-<!--category form  -->
-<div class="mb-6"  >
-<h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
-  Add New Category
-</h2>
-<form class="bg-white p-4 rounded-xl flex flex-col gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden">
-  <div>
-    <label for="category-title" class="block mb-1 text-white"
-      >title</label
-    >
-    <input
-      type="text"
-      name="category-title"
-      id="category-title"
-      class="bg-transparent p-4 rounded-xl  gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden text-white"
-    />
-  </div>
-  <div>
-    <label
-      for="category-description"
-      class="block mb-1 text-white"
-      >Description</label
-    >
-    <textarea
-      type="text"
-      name="category-description"
-      id="category-description"
-      class=" bg-transparent p-4 rounded-xl  gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden text-white  w-full"
-    ></textarea>
-  </div>
-  <div class="flex items-center justify-between gap-x-4">
-    <button
-      class="bg-slate-700 flex-1 border border-slate-400 backdrop-filter backdrop-blur-sm bg-opacity-20 overflow-hidden text-white rounded-xl py-2 px-4"
-    >
-      Cancel
-    </button>
-    <button
-      class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
-    >
-      Add New Category
-    </button>
-  </div>
-</form>
-</div>
-<!--Products   -->
-<div class="mb-6 ">
-<h2 class="text-md font-bold text-slate-300 pt-2 mb-2 mx-auto">
-  Add New Product
-</h2>
-<form class=" p-4 rounded-xl flex flex-col gap-y-4 bg-white p-4 rounded-xl flex flex-col gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden">
-  <div>
-    <label for="category-title" class="block mb-1 text-white"
-      >Product title</label
-    >
-    <input
-      type="text"
-      name="product-title"
-      id="product-title"
-      class="bg-transparent p-4 rounded-xl  text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500"
-placeholder="Product title" 
-    />
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory App</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+  </head>
+  <body class="bg-[url('/src/assets/pexels-merlin-lightpainting-11138001.jpg')] ">
 
-  <div>
-    <label
-      for="category-description"
-      class="block mb-1 text-white"
-      >Quantity</label
-    >
-    <input
-      type="number"
-      name="Quantity"
-      id="Quantity"
-      class="bg-transparent p-4 rounded-xl text-white  gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500"
-      placeholder="Quantity"
-    />
-  </div>
 
-  <div>
-    <label for="ProductQuntity" class="block mb-1 text-white"
-      >Category</label
+    <div
+      class="min-h-screen antialiased text-slate-500 dark:text-slate-400 "
     >
-    <select
-      class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500 w-full"
-      name="Product-category"
-      id="Product-category"
-    >
-      <option class="bg-transparent text-slate-500" value="select">
-        Select a category
-      </option>
-      <option
-        class="bg-transparent text-slate-500"
-        value="javascript"
+      <!-- APP BAR -->
+      <div
+        class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent h-12 bg-slate-50 flex items-center justify-center gap-x-4 backdrop-filter bg-opacity-20 border border-slate-50 border-opacity-50"
       >
-        javascript
-      </option>
-      <option class="bg-transparent text-slate-500" value="Reactjs">
-        Reactjs
-      </option>
-      <option class="bg-transparent text-slate-500" value="Nodejs">
-        Nodejs
-      </option>
-      <option class="bg-transparent text-slate-500" value="Expressjs">
-        Expressjs
-      </option>
-      <option class="bg-transparent text-slate-500" value="vuejs">
-        vuejs
-      </option>
-    </select>
+        <h1 class="text-xl font-bold text-slate-300">
+          Inventory App using Tailwind & JS
+        </h1>
+        <span
+          class="flex items-center justify-center w-7 h-7 rounded-full dark:bg-slate-900 border-2 text-slate-300 border-slate-600"
+          >7</span
+        >
+      </div>
+
+      <!--APP CONTENT  -->
+      <div
+        class="container mx-w-screen-sm mx-auto  shadow-lg bg-[url('/src/assets/pexels-merlin-lightpainting-11138001.jpg')] overflow-hidden w-full bg-cover bg-center bg-no-repeat mb-8 "
+      >
+        <!--category form  -->
+        <div class="mb-6">
+          <h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
+            Add New Category
+          </h2>
+          <form
+            class="bg-white p-4 rounded-xl flex flex-col gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden"
+          >
+            <div>
+              <label for="category-title" class="block mb-1 text-white"
+                >title</label
+              >
+              <input
+                type="text"
+                name="category-title"
+                id="category-title"
+                class="bg-transparent p-4 rounded-xl gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden text-white"
+              />
+            </div>
+            <div>
+              <label for="category-description" class="block mb-1 text-white"
+                >Description</label
+              >
+              <textarea
+                type="text"
+                name="category-description"
+                id="category-description"
+                class="bg-transparent p-4 rounded-xl gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden text-white w-full"
+              ></textarea>
+            </div>
+            <div class="flex items-center justify-between gap-x-4">
+              <button
+                class="bg-slate-700 flex-1 border border-slate-400 backdrop-filter backdrop-blur-sm bg-opacity-10 overflow-hidden text-white rounded-xl py-2 px-4"
+              >
+                Cancel
+              </button>
+              <button
+                class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+              >
+                Add New Category
+              </button>
+            </div>
+          </form>
+        </div>
+        <!--Products   -->
+        <div class="mb-6">
+          <h2 class="text-md font-bold text-slate-300 pt-2 mb-2 mx-auto">
+            Add New Product
+          </h2>
+          <form
+            class="p-4 rounded-xl flex flex-col gap-y-4 bg-white backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden"
+          >
+        
+            <div>
+              <label for="category-title" class="block mb-1 text-white"
+                >Product title</label
+              >
+              <input
+                type="text"
+                name="product-title"
+                id="product-title"
+                class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500"
+                placeholder="Product title"
+              />
+            </div>
+
+            <div>
+              <label for="category-description" class="block mb-1 text-white"
+                >Quantity</label
+              >
+              <input
+                type="number"
+                name="Quantity"
+                id="Quantity"
+                class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500"
+                placeholder="Quantity"
+              />
+            </div>
+
+            <div>
+              <label for="ProductQuntity" class="block mb-1 text-white"
+                >Category</label
+              >
+              <select
+                class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden border-slate-500 w-full"
+                name="Product-category"
+                id="Product-category"
+              >
+                <option class="bg-transparent text-slate-500" value="select">
+                  Select a category
+                </option>
+                <option
+                  class="bg-transparent text-slate-500"
+                  value="javascript"
+                >
+                  javascript
+                </option>
+                <option class="bg-transparent text-slate-500" value="Reactjs">
+                  Reactjs
+                </option>
+                <option class="bg-transparent text-slate-500" value="Nodejs">
+                  Nodejs
+                </option>
+                <option class="bg-transparent text-slate-500" value="Expressjs">
+                  Expressjs
+                </option>
+                <option class="bg-transparent text-slate-500" value="vuejs">
+                  vuejs
+                </option>
+              </select>
+            </div>
+
+            <div class="flex items-center justify-between gap-x-4">
+              <button
+                class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+              >
+                Add New Product
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Product list -->
+        <h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
+                Product list
+               </h2>
+<div class="flex justify-between items-center mb-3">
+  <span  class="text-whitte">Reactjs</span>
+  <div class="flex items-center gap-x-3">
+<span class="text-slate-400">date</span>
+<span class="block px-3 py-0.5 text-slate-400 rounded-2xl bg-slate-700 border border-slate-400 text-sm">frontend</span>
+
+<span
+          class="flex items-center justify-center w-7 h-7 rounded-full dark:bg-slate-900 border-2 text-slate-300 border-slate-300"
+          >7</span
+        >
+        <button class=" px-2 py-0.5 rounded-2xl border border-red-400 text-red-400 text-sm">delete</button>
+
   </div>
 
-  <div class="flex items-center justify-between gap-x-4">
-    <button
-      class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-purple-500 ... p-4 rounded-xl  gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden  flex-1 text-white py-2 px-4"
-    >
-      Add New Product
-    </button>
-  </div>
-</form>
-</div>
-
-
-
 
 </div>
-
-
+<div class="h-20">
+  
 </div>
 
-</body>
+      </div>
+
+
+    </div>
+
+
+  </body>
 </html>
