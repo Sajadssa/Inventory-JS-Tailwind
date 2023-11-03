@@ -3,14 +3,21 @@ const products = [
     id: 1,
     category:"frontend",
     title: "reactjs",
-    update: "reactjs is powerfull framework for making ui"
+    update: "2023-11-03T00:00:00.000Z"
   },
   {
     id: 2,
-    idcat: 1,
-    title: "vuejs",
-    description: "vuejs is good framework for making ui"
+    category: "Backend",
+    title: "Node.js",
+    update: "2023-11-05T14:48:00.000"
 
+  },
+  {
+    id:3,
+    category: "frontendd",
+    title: "vue.js",
+    update: "2023-11-06T14:55:00.000"
+    
   }
 ];
 
@@ -18,12 +25,14 @@ const categories = [
   {
     id: 1,
     title: "frontend",
-    description:"this is frontend category",
+    description: "this is frontend category",
+    createAt:"2023-11-01T16:59:00.000",
   },
   {
     id: 2,
     title: "backend",
-    description:"this is backend category",
+    description: "this is backend category",
+    createAt: "2023-11-02T16:12:00.000",
   }
 ];
 
@@ -33,6 +42,56 @@ export default class Storage{
   //add new category
   //save category
   //getAllCategories
+
+  static getAllCategories() {
+    //products,category=> localStorage=>
+    const savedCategories = JSON.parse(localStorage.getItem("categories")) || [];
+    //sort=>نزولی=>descnding
+    //1,2,3,4,5,6
+    const sortedCategories = savedCategories.sort((a, b) => {
+      //for sort catagories based on createAt we use from Date Method and take instance from it
+      return new Date(a.createAt) < new Date(b.createAt) ? -1 : 1;
+      //sort based on asc if a<b
+      //sort based on desc if <b
+
+    });
+    return sortedCategories;
+  }
+  //create new category and save new category in local storage
+ 
+  static saveCategory(categoryToSave) {
+    //FIRST CHECK SAVED CATEGORIES 
+    const savedCategories = localStorage.getAllCategories(); 
+    //edit...=>save
+    //new=>...save
+    //for check exist category we use Find method
+
+    const exitedItem = savedCategories.find(c => c.id === categoryToSave.id);
+    //if an exit go edit category founded
+    if (exitedItem) {
+      
+      exitedItem.title = categoryToSave.title;
+      exitedItem.description = categoryToSave.description;
+    }
+    //if have new category
+    else {
+      //we add 2 property push to an object category
+      //push createdAt and Generate new id 
+
+      //new category
+      //we set 2 property for new Category
+      categoryToSave.id = new Date().getTime();
+      categoryToSave.createAt = new Date().toISOString();
+     
+      savedCategories.push(categoryToSave);
+
+
+    }
+    
+    //after edit and created new category we should save in localStorage into savedCategories
+    localStorage.setItem('category',JSON.stringify(savedCategories));
+
+  }
 
 
 
