@@ -60,6 +60,7 @@ export default class Storage{
   //create new category and save new category in local storage
  
   static saveCategory(categoryToSave) {
+    
     //FIRST CHECK SAVED CATEGORIES 
     const savedCategories = localStorage.getAllCategories(); 
     //edit...=>save
