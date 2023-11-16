@@ -9,7 +9,7 @@ const addNewCategoryBtn= document.querySelector("#add-new-category");
 
 //define class for categoryView that describe properties and method occur in category like add new,delete,update Category
 //because e need category for product so we it default export
-export default class CategoryView{
+class CategoryView{
   //when create instance from this class go attach eventlistener to button add-new-category -for initialize values here input date by user 
   constructor() {
 
@@ -35,13 +35,47 @@ export default class CategoryView{
     //not  execute code after return
     //for save new category
     Storage.saveCategory({ title, description });//3=>4
-   this.categories= Storage.getAllCategories();
-
+    this.categories = Storage.getAllCategories();
     //update DOM: update select option in categories
+    this.createCategoriesList();
+
 
     
   }
 
+  //set new method
+
+  setApp() {
+    this.categories = Storage.getAllCategories();
+  }
+
+  //new method for update select option in category
+
+  //make dynamic select option
+
+  createCategoriesList() {
+
+    // categories is an array of objects so we use foreach method for render data in select option based on ``  template literal
+
+    let result = ` <option class="bg-transparent text-slate-500" value="select">
+                  Select a category
+                </option> `;
+    this.catagories.forEach(element => {
+      result+=`<option class="bg-transparent text-slate-500" value=${element.id}>
+                  ${element.title}
+                </option>`
+      
+    });
+
+    const categoryDOM = document.getElementById("Product-category");
+    categoryDOM.innerHTML = result;
+    
+  }
 
 }
 
+//instance from class CategoryView
+//for not need every instance from this class so we export default based on new instance new categoryView
+
+export default new CategoryView();
+ 
