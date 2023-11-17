@@ -60,7 +60,7 @@ class CategoryView{
     let result = ` <option class="bg-transparent text-slate-500" value="select">
                   Select a category
                 </option> `;
-    this.catagories.forEach(element => {
+    this.categories.forEach(element => {
       result+=`<option class="bg-transparent text-slate-500" value=${element.id}>
                   ${element.title}
                 </option>`

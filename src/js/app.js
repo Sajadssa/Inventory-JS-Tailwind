@@ -8,11 +8,6 @@ document.addEventListener('DOMContentLoaded ', () => {
   CategoryView.createCategoriesList(); //
 });
 
-
-class App{
-
-}
-
 //target:
 //1.create category
 //2.create product based on category
