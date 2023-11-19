@@ -62,7 +62,7 @@ export default class Storage{
   static saveCategory(categoryToSave) {
     
     //FIRST CHECK SAVED CATEGORIES 
-    const savedCategories = localStorage.getAllCategories(); 
+    const savedCategories = Storage.getAllCategories(); 
     //edit...=>save
     //new=>...save
     //for check exist category we use Find method

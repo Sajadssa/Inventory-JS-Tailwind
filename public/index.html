@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory App</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
-  <body class="bg-[url('/src/assets/pexels-merlin-lightpainting-11138001.jpg')]">
-
-
+  <body>
     <div
-      class="min-h-screen antialiased text-slate-500 dark:text-slate-400 "
+      class="bg-[url('/src/assets/pexels-merlin-lightpainting-11138001.jpg')] w-full bg-cover bg-center bg-no-repeat mb-8 first-letter:min-h-screen"
     >
-      <!-- APP BAR -->
+      <!-- appbar -->
       <div
-        class="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent h-12 bg-slate-50 flex items-center justify-center gap-x-4 backdrop-filter bg-opacity-20 border border-slate-50 border-opacity-50"
+        class="sticky top-0 z-40 w-full h-12 flex items-center justify-center gap-x-4 bg-slate-700 mb-6 backdrop-filter bg-opacity-60 border-slate-50 border-opacity-10 transition-colors duration-500"
       >
-        <h1 class="text-xl font-bold text-slate-300">
-          Inventory App using Tailwind & JS
-      </h1>
+        <h1 class="md:text-xl text-sm font-bold text-slate-300">
+          Inventory App using tailwind & Js
+        </h1>
         <span
-          class="flex items-center justify-center w-7 h-7 rounded-full dark:bg-slate-900 border-2 text-slate-300 border-slate-600"
+          class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 border-2 border-slate-300 font-bold text-slate-300"
           >7</span
         >
       </div>
-
-      <!--APP CONTENT  -->
-      <div
-        class="container mx-w-screen-sm mx-auto shadow-lg bg-[url('/src/assets/pexels-merlin-lightpainting-11138001.jpg')] overflow-hidden w-full bg-cover bg-center bg-no-repeat mb-8 "
-      >
-        <!--category form  -->
+      <!-- app content -->
+      <div class="container max-w-screen-sm mx-auto p-4 shadow-lg">
+        <!-- category form -->
         <section>
-  <div class="mb-6">
-            <h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
-              Add New Category
+          <div class="mb-6" id="category-wrapper">
+            <h2 class="text-xl text-slate-300 font-bold mb-2">
+              Add New category
             </h2>
             <form
-              class= " bg-white p-4 rounded-xl flex flex-col justify-center  gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10"
+              class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10"
             >
               <div>
-                <label for="category-title" class="block mb-1 text-white"
+                <label for="category-title" class="block mb-1 text-slate-200"
                   >title</label
                 >
                 <input
                   type="text"
                   name="category-title"
                   id="category-title"
-                  class="bg-transparent p-4 rounded-xl gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden text-white"
+                  class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full md:w-auto"
                 />
               </div>
               <div>
-                <label for="category-description" class="block mb-1 text-white"
-                  >Description</label
+                <label
+                  for="category-description"
+                  class="block mb-1 text-slate-200"
+                  >description</label
                 >
                 <textarea
-                  type="text"
+                  class="bg-transparent p-4 rounded-xl gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 border border-slate-500 text-slate-400 w-full"
+                  type=" text"
                   name="category-description"
                   id="category-description"
-                  class="bg-transparent p-4 rounded-xl gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden text-white w-full"
                 ></textarea>
               </div>
               <div class="flex items-center justify-between gap-x-4">
-                <button id="add-new-category"
+                <button
                   class="bg-slate-700 flex-1 border border-slate-400 backdrop-filter backdrop-blur-sm bg-opacity-10 overflow-hidden text-white rounded-xl py-2 px-4"
+                  id="cancel-add-category"
                 >
                   Cancel
                 </button>
                 <button
+                  id="add-new-category"
                   class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
                 >
-                  Add New Category
+                  Add Category
                 </button>
               </div>
             </form>
           </div>
+
+          <!-- <button id="toggle-add-category" class="text-slate-600 text-lg mb-4 font-medium">Add new Category?</button> -->
         </section>
+        <!-- product form -->
         <!--Products   -->
         <div class="mb-6">
           <h2 class="text-md font-bold text-slate-300 pt-2 mb-2 mx-auto">
@@ -83,7 +85,6 @@
           <form
             class="p-4 rounded-xl flex flex-col gap-y-4 bg-white backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden"
           >
-        
             <div>
               <label for="category-title" class="block mb-1 text-white"
                 >Product title</label
@@ -114,13 +115,13 @@
               <label for="ProductQuntity" class="block mb-1 text-white"
                 >Category</label
               >
-              <select aria-label="label for the select"
+              <select
+                aria-label="label for the select"
                 class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-10 overflow-hidden border-slate-500 w-full"
-                name="Product-category"
-                id="Product-category"
+                name="product-category"
+                id="product-category"
               >
-             
-              </select>
+            </select>
             </div>
 
             <div class="flex items-center justify-between gap-x-4">
@@ -135,39 +136,32 @@
 
         <!-- Product list -->
         <h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
-                Product list
-               </h2>
-<div class="flex justify-between items-center mb-3">
-  <span  class="text-whitte">Reactjs</span>
-  <div class="flex items-center gap-x-3">
-<span class="text-slate-400">date</span>
-<span class="block px-3 py-0.5 text-slate-400 rounded-2xl bg-slate-700 border border-slate-400 text-sm">frontend</span>
+          Product list
+        </h2>
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-slate-200">Reactjs</span>
+          <div class="flex items-center gap-x-3">
+            <span class="text-slate-200">date</span>
+            <span
+              class="block px-3 py-0.5 text-slate-200 rounded-2xl bg-transparent border border-slate-200 text-sm"
+              >frontend</span
+            >
 
-<span
-          class="flex items-center justify-center w-7 h-7 rounded-full dark:bg-slate-900 border-2 text-slate-300 border-slate-300"
-          >7</span
-        >
-        <button class=" px-2 py-0.5 rounded-2xl border border-red-400 text-red-400 text-sm">delete</button>
-
-  </div>
-
-
-</div>
-<div class="h-20">
-  
-</div>
-
+            <span
+              class="flex items-center justify-center w-7 h-7 rounded-full border-2 text-slate-200 border-slate-300"
+              >7</span
+            >
+            <button
+              class="px-2 py-0.5 rounded-2xl border border-red-400 text-red-400 text-sm"
+            >
+              delete
+            </button>
+          </div>
+        </div>
+        <div class="h-20"></div>
       </div>
-
-
     </div>
-<!-- render app.js i html page -->
- <script src="/src/js/app.js" type="module"></script>
-
+    <!-- render app.js i html page -->
+    <script src="/src/js/app.js" type="module"></script>
   </body>
-
-
-
 </html>
-
-
