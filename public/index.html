@@ -74,7 +74,7 @@
             </form>
           </div>
 
-          <!-- <button id="toggle-add-category" class="text-slate-600 text-lg mb-4 font-medium">Add new Category?</button> -->
+          <button id="toggle-add-category" class="text-slate-600 text-lg mb-4 font-medium">Add new Category?</button>
         </section>
         <!-- product form -->
         <!--Products   -->
@@ -105,7 +105,7 @@
               <input
                 type="number"
                 name="Quantity"
-                id="Quantity"
+              id="product-quantity"
                 class="bg-transparent p-4 rounded-xl text-white gap-y-4 backdrop-filter backdrop-blur-lg bg-opacity-20 overflow-hidden border-slate-500"
                 placeholder="Quantity"
               />
@@ -126,7 +126,7 @@
 
             <div class="flex items-center justify-between gap-x-4">
               <button
-                class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+                class="flex-1 text-white rounded-xl py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500" id="add-new-product"
               >
                 Add New Product
               </button>
@@ -138,26 +138,23 @@
         <h2 class="text-md font-bold text-white pt-2 mb-2 mx-auto">
           Product list
         </h2>
-        <div class="flex justify-between items-center mb-3">
-          <span class="text-slate-200">Reactjs</span>
-          <div class="flex items-center gap-x-3">
-            <span class="text-slate-200">date</span>
-            <span
-              class="block px-3 py-0.5 text-slate-200 rounded-2xl bg-transparent border border-slate-200 text-sm"
-              >frontend</span
-            >
+         <div class="flex items-center justify-between mb-6">
+        <label for="search-input" class="text-slate-200 text-lg">search</label>
+        <input type="text" name="search-input" id="search-input"
+          class="bg-transparent rounded-xl border border-slate-200 text-slate-700">
+      </div>
 
-            <span
-              class="flex items-center justify-center w-7 h-7 rounded-full border-2 text-slate-200 border-slate-300"
-              >7</span
-            >
-            <button
-              class="px-2 py-0.5 rounded-2xl border border-red-400 text-red-400 text-sm"
-            >
-              delete
-            </button>
-          </div>
-        </div>
+ <div class="flex items-center justify-between mb-6">
+        <label for="sort-products" class="text-slate-200 text-lg">sort</label>
+        <select name="sort-products" id="sort-products" class="bg-transparent text-slate-200 rounded-xl border border-slate-200">
+          <option class="bg-slate-500 text-slate-800" value="">select a category</option>
+          <option class="bg-slate-500 text-slate-800" selected value="newest">newest</option>
+          <option class="bg-slate-500 text-slate-800" value="oldest">oldest</option>
+        </select>
+      </div>
+
+
+        <div id="products-list" class="overflow-x-auto"></div>
         <div class="h-20"></div>
       </div>
     </div>
